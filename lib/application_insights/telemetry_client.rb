@@ -79,7 +79,7 @@ module ApplicationInsights
 
       parsed_stack = []
       if exception.backtrace
-        frame_pattern = /^(?<file>.*):(?<line>\d+)(\.|:in `((?<method>.*)'$))/
+        frame_pattern = /^(?<file>.*):(?<line>\d+)(\.|:in '((?<method>.*)'$))/
 
         exception.backtrace.each_with_index do |frame, counter|
           match = frame_pattern.match frame
